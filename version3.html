@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>Innovators Table</title>
+</head>
+<body>
+
+<canvas id="stars"></canvas>  
+
+<!-- ADDED OVERLAY -->
+<div class="overlay" id="introOverlay">
+  <div class="overlay-text">Click to proceed...</div>
+</div>
+
+<audio id="bgMusic" loop>
+  <source src="bgmusic.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="hoverSound">
+  <source src="hover.mp3" type="audio/mpeg">
+</audio>
+  
+<h1>Innovators Table</h1>
+<h4>Made by CDR (AKA Mohammad Radwan Zmmo)</h4>
+<h4>Made by Zezoo (AKA Ezz Musaad)</h4>
+<div class="table">
+  <!-- Row 1 -->
+  <div class="element-box" data-info="funny,short">
+    <div class="atomic-number">1</div>
+    <div class="trait-emojis">😄🧍‍♂️</div>
+    <div class="symbol">Aa</div><div class="name">Abdulmajeed<br>Atiah</div>
+    <div class="info-popup">Funny 😄 · Short 🧍‍♂️</div>
+  </div>
+  <div style="grid-column: span 3;"></div>
+  <div class="element-box" data-info="smart,skinny">
+    <div class="atomic-number">2</div>
+    <div class="trait-emojis">🧠🪶</div>
+    <div class="symbol">At</div><div class="name">Aser<br>Atallah</div>
+    <div class="info-popup">Smart 🧠 · Skinny 🪶</div>
+  </div>
+
+  <!-- Row 2 -->
+  <div class="element-box" data-info="quiet,tall">
+    <div class="atomic-number">3</div>
+    <div class="trait-emojis">🤫📏</div>
+    <div class="symbol">Ad</div><div class="name">Abdullah<br>Daifallah</div>
+    <div class="info-popup">Quiet 🤫 · Tall 📏</div>
+  </div>
+  <div class="element-box" data-info="active,tall">
+    <div class="atomic-number">4</div>
+    <div class="trait-emojis">💥📏</div>
+    <div class="symbol">Af</div><div class="name">Ahmad<br>Fouad</div>
+    <div class="info-popup">Active 💥 · Tall 📏</div>
+  </div>
+  <div class="element-box" data-info="active,tall">
+    <div class="atomic-number">5</div>
+    <div class="trait-emojis">💥📏</div>
+    <div class="symbol">Al</div><div class="name">Abdullah<br>Laelaoi</div>
+    <div class="info-popup">Active 💥 · Tall 📏</div>
+  </div>
+  <div class="element-box" data-info="peaceful,athletic">
+    <div class="atomic-number">6</div>
+    <div class="trait-emojis">🕊️🏋️‍♂️</div>
+    <div class="symbol">An</div><div class="name">Amjad<br>Niaz</div>
+    <div class="info-popup">Peaceful 🕊️ · Athletic 🏋️‍♂️</div>
+  </div>
+  <div class="element-box" data-info="active,athletic">
+    <div class="atomic-number">7</div>
+    <div class="trait-emojis">💥🏋️‍♂️</div>
+    <div class="symbol">Ao</div><div class="name">Ahmed<br>Omer</div>
+    <div class="info-popup">Active 💥 · Athletic 🏋️‍♂️</div>
+  </div>
+
+  <!-- Row 3+ -->
+  <div class="element-box" data-info="funny,athletic">
+    <div class="atomic-number">8</div>
+    <div class="trait-emojis">😄🏋️‍♂️</div>
+    <div class="symbol">Bk</div><div class="name">Bader<br>Khayat</div>
+    <div class="info-popup">Funny 😄 · Athletic 🏋️‍♂️</div>
+  </div>
+  <div class="element-box" data-info="quiet,short">
+    <div class="atomic-number">9</div>
+    <div class="trait-emojis">🤫🧍‍♂️</div>
+    <div class="symbol">Br</div><div class="name">Batal<br>Rami</div>
+    <div class="info-popup">Quiet 🤫 · Short 🧍‍♂️</div>
+  </div>
+  <div class="element-box" data-info="active,short">
+    <div class="atomic-number">10</div>
+    <div class="trait-emojis">💥🧍‍♂️</div>
+    <div class="symbol">Em</div><div class="name">Ezz<br>Musaad</div>
+    <div class="info-popup">Active 💥 · Short 🧍‍♂️</div>
+  </div>
+  <div class="element-box" data-info="funny,tall">
+    <div class="atomic-number">11</div>
+    <div class="trait-emojis">😄📏</div>
+    <div class="symbol">Fm</div><div class="name">Fahad<br>Mohammad</div>
+    <div class="info-popup">Funny 😄 · Tall 📏</div>
+  </div>
+  <div class="element-box" data-info="quiet,smart">
+    <div class="atomic-number">12</div>
+    <div class="trait-emojis">🤫🧠</div>
+    <div class="symbol">Ft</div><div class="name">Fahad<br>Turki</div>
+    <div class="info-popup">Quiet 🤫 · Smart 🧠</div>
+  </div>
+  <div class="element-box" data-info="active,smart">
+    <div class="atomic-number">13</div>
+    <div class="trait-emojis">💥🧠</div>
+    <div class="symbol">Im</div><div class="name">Ibrahim<br>Mohammad</div>
+    <div class="info-popup">Active 💥 · Smart 🧠</div>
+  </div>
+  <div class="element-box" data-info="athletic,short">
+    <div class="atomic-number">14</div>
+    <div class="trait-emojis">🏋️‍♂️🧍‍♂️</div>
+    <div class="symbol">Ka</div><div class="name">Khalid<br>Adnan</div>
+    <div class="info-popup">Athletic 🏋️‍♂️ · Short 🧍‍♂️</div>
+  </div>
+  <div class="element-box" data-info="quiet,short">
+    <div class="atomic-number">15</div>
+    <div class="trait-emojis">🤫🧍‍♂️</div>
+    <div class="symbol">Kn</div><div class="name">Khalid<br>Nawar</div>
+    <div class="info-popup">Quiet 🤫 · Short 🧍‍♂️</div>
+  </div>
+  <div class="element-box" data-info="quiet,tall">
+    <div class="atomic-number">16</div>
+    <div class="trait-emojis">🤫📏</div>
+    <div class="symbol">Mm</div><div class="name">Mohammad<br>Mahmoud</div>
+    <div class="info-popup">Quiet 🤫 · Tall 📏</div>
+  </div>
+  <div class="element-box" data-info="smart,skinny">
+    <div class="atomic-number">17</div>
+    <div class="trait-emojis">🧠🪶</div>
+    <div class="symbol">Mr</div><div class="name">Mohammad<br>Radwan</div>
+    <div class="info-popup">Smart 🧠 · Skinny 🪶</div>
+  </div>
+  <div class="element-box" data-info="funny,tall">
+    <div class="atomic-number">18</div>
+    <div class="trait-emojis">😄📏</div>
+    <div class="symbol">Mt</div><div class="name">Mohammad<br>Tahir</div>
+    <div class="info-popup">Funny 😄 · Tall 📏</div>
+  </div>
+  <div class="element-box" data-info="quiet,funny">
+    <div class="atomic-number">19</div>
+    <div class="trait-emojis">🤫😄</div>
+    <div class="symbol">My</div><div class="name">Mohammad<br>Yassir</div>
+    <div class="info-popup">Quiet 🤫 · Funny 😄</div>
+  </div>
+  <div class="element-box" data-info="funny,tall">
+    <div class="atomic-number">20</div>
+    <div class="trait-emojis">😄📏</div>
+    <div class="symbol">Mz</div><div class="name">Mohammad<br>Zackaria</div>
+    <div class="info-popup">Funny 😄 · Tall 📏</div>
+  </div>
+  <div class="element-box" data-info="athletic,tall">
+    <div class="atomic-number">21</div>
+    <div class="trait-emojis">🏋️‍♂️📏</div>
+    <div class="symbol">Nm</div><div class="name">Naif Mohammad<br>Al Ghethami</div>
+    <div class="info-popup">Athletic 🏋️‍♂️ · Tall 📏</div>
+  </div>
+  <div class="element-box" data-info="smart,quiet">
+    <div class="atomic-number">22</div>
+    <div class="trait-emojis">🧠🤫</div>
+    <div class="symbol">Om</div><div class="name">Obay<br>Mohammad</div>
+    <div class="info-popup">Smart 🧠 · Quiet 🤫</div>
+  </div>
+  <div class="element-box" data-info="funny,tall">
+    <div class="atomic-number">23</div>
+    <div class="trait-emojis">😄📏</div>
+    <div class="symbol">Qm</div><div class="name">Qusai<br>Muteb</div>
+    <div class="info-popup">Funny 😄 · Tall 📏</div>
+  </div>
+  <div class="element-box" data-info="smart,strong">
+    <div class="atomic-number">24</div>
+    <div class="trait-emojis">🧠💪</div>
+    <div class="symbol">Ta</div><div class="name">Tarig<br>Ahmad</div>
+    <div class="info-popup">Smart 🧠 · Strong 💪</div>
+  </div>
+  <div class="element-box" data-info="funny,short">
+    <div class="atomic-number">25</div>
+    <div class="trait-emojis">😄🧍‍♂️</div>
+    <div class="symbol">Tf</div><div class="name">Turki<br>Fahad</div>
+    <div class="info-popup">Funny 😄 · Short 🧍‍♂️</div>
+  </div>
+</div>
+
+<!-- ---------- LEGEND ---------- -->
+<div class="legend">
+  <div class="legend-item">
+    <div class="legend-color" style="background:var(--funny);"></div>
+    😄<span>Funny</span>
+  </div>
+  <div class="legend-item">
+    <div class="legend-color" style="background:var(--smart);"></div>
+    🧠<span>Smart</span>
+  </div>
+  <div class="legend-item">
+    <div class="legend-color" style="background:var(--active);"></div>
+    💥<span>Active</span>
+  </div>
+  <div class="legend-item">
+    <div class="legend-color" style="background:var(--athletic);"></div>
+    🏋️‍♂️<span>Athletic</span>
+  </div>
+  <div class="legend-item">
+    <div class="legend-color" style="background:var(--quiet);"></div>
+    🤫<span>Quiet</span>
+  </div>
+  <div class="legend-item">
+    <div class="legend-color" style="background:var(--tall);"></div>
+    📏<span>Tall</span>
+  </div>
+</div>
+
+<script src="index.js">
+</script>
+</body>
+</html>
