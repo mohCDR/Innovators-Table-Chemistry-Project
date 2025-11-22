@@ -1,11 +1,14 @@
+// Background music
 const bgMusic = document.getElementById('bgMusic');
 const hoverSound = document.getElementById('hoverSound');
 
+// Set volume
 bgMusic.volume = 0.3;
 hoverSound.volume = 0.5;
 
 let musicStarted = false;
 
+// Start music on first click
 document.body.addEventListener('click', () => {
   if (!musicStarted) {
     bgMusic.play().catch(e => console.log('Music play failed:', e));
@@ -13,6 +16,7 @@ document.body.addEventListener('click', () => {
   }
 }, { once: true });
 
+// Add hover sound to all element boxes
 const elementBoxes = document.querySelectorAll('.element-box');
 elementBoxes.forEach(box => {
   box.addEventListener('mouseenter', () => {
@@ -21,9 +25,11 @@ elementBoxes.forEach(box => {
   });
 });
 
+// Stars animation
 const canvas = document.getElementById('stars');
 const ctx = canvas.getContext('2d');
 
+// Da Variables
 const config = {
   numStars: 250,            
   starMinSize: 0.5,         
@@ -38,7 +44,7 @@ const config = {
   mouseProximityMax: 150,   
   mouseProximityBoost: 0.7, 
 
-  // mouse effects for uh the mouse or smth 
+  // mouse effects for uh the mouse or smth idk how to explain it
   sparklesEnabled: true,   // if you want it on then make it true, if not then false 
   sparklesPerMove: 1,       
   sparkleMinSize: 0.5,
