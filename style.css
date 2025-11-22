@@ -31,7 +31,6 @@ h4{
   
 span {color:white}  
   
-/* ---------- GRID ---------- */
 .table {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -64,7 +63,6 @@ span {color:white}
 .symbol { font-size: 1.5rem; font-weight: 700; }
 .name { font-size: 0.9rem; margin-top: 5px; line-height: 1.2em; }
 
-/* ---------- EMOJI ---------- */
 .trait-emojis {
   position: absolute;
   top: 8px;
@@ -72,7 +70,6 @@ span {color:white}
   font-size: 1.2rem;
 }
 
-/* ---------- POPUP ---------- */
 .info-popup {
   position: absolute;
   bottom: 110%;
@@ -93,7 +90,6 @@ span {color:white}
   opacity: 1;
 }
 
-/* ---------- LEGEND ---------- */
 .legend {
   display: flex;
   flex-wrap: wrap;
@@ -113,7 +109,6 @@ span {color:white}
   margin-bottom: 6px;
 }
 
-/* ---------- TRAIT COLORS ---------- */
 :root {
   --funny: #ffe7a0;
   --smart: #b3d9ff;
@@ -135,7 +130,6 @@ span {color:white}
   z-index: -1;
 }  
   
-/* gradients for each combo */
 [data-info*="funny"][data-info*="short"] {background:linear-gradient(135deg,var(--funny),var(--short));}
 [data-info*="funny"][data-info*="tall"] {background:linear-gradient(135deg,var(--funny),var(--tall));}
 [data-info*="funny"][data-info*="quiet"] {background:linear-gradient(135deg,var(--funny),var(--quiet));}
@@ -155,10 +149,8 @@ span {color:white}
 [data-info*="active"][data-info*="smart"] {background:linear-gradient(135deg,var(--active),var(--smart));}
 
   
-/* default fallback */
 .element-box {background:linear-gradient(135deg,#999,#666);}
 
-/* ========== ADDED OVERLAY STYLES ========== */
 .overlay {
   position: fixed;
   top: 0;
